@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Retail Store</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
+	<link rel="stylesheet" href="home.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.html">
+				<img src="assets/images__1_-removebg-preview.png" alt="My Retail Store Logo">
+			</a>
+			<p style="font-family:'Allura'; font-size: 45px; white-space:nowrap;">Best Buy</p>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="cart.html">Cart</a></li>
+				<li><a href="profile.html">Profile</a></li>
+				<li><a href="aboutUs.html">About</a></li>
+				<li><a href="contactUs.html">Contact Us</a></li>
+			</ul>
+		</nav>
+		<div class="search-bar">
+			<form action="searchProduct.html" method="get">
+				<input type="text" placeholder="Search..." name="search" id="search">
+				<button type="submit">Go</button>
+			</form>
+			<script src="search.js"></script>
+		</div>
+	</header>
+	<div class="heroine">
+		<h1 class="welcome">Welcome to Best Buy!</h1>
+	</div>
+	<div class="box1">Featured Products</div>
+	
+	<div class="container">
+		<div id="featuredCarousel" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<a href="product.html?pid=1">
+						<img src="/assets/iphone.jpg" class="d-block w-100">
+					</a>
+				</div>
+				<div class="carousel-item">
+					<a href="product.html?pid=2">
+						<img src="/assets/laptop.jpg" class="d-block w-100">
+					</a>
+				</div>
+				<div class="carousel-item">
+					<a href="product.html?pid=3">
+						<img src="/assets/tuxedo..jpg" class="d-block w-100">
+					</a>
+				</div>
+				<div class="carousel-item">
+					<a href="product.html?pid=4">
+						<img src="/assets/press.jpg" class="d-block w-100">
+					</a>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#featuredCarousel" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#featuredCarousel" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+		<div class="box2">On Sale Now!</div>
+		
+		
+		<div class="container">	
+			<div id="onSaleCarousel" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<a href="product.html?pid=5">
+							<img src="/assets/earbuds.jpg" class="d-block w-100">
+						</a>
+					</div>
+					<div class="carousel-item">
+						<a href="product.html?pid=6">
+							<img src="/assets/gta5cd.jpg" class="d-block w-100">
+						</a>
+					</div>
+					<div class="carousel-item">
+						<a href="product.html?pid=7">
+							<img src="/assets/tvled.jpg" class="d-block w-100">
+						</a>
+					</div>
+					<div class="carousel-item">
+						<a href="product.html?pid=8">
+							<img src="/assets/ps5i.jpg" class="d-block w-100">
+						</a>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#onSaleCarousel" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#onSaleCarousel" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			
+			</div>
+		</div>
+	
+	<footer>
+		<p>&copy; 2023 BestBuy. All rights reserved.</p>
+	</footer>
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>

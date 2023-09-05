@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up Page</title>
+  <link rel="stylesheet" type="text/css" href="signup.css">
+</head>
+<body>
+  <div class="signup-form">
+    <h2>Sign Up</h2>
+    <form action="" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+
+      <input type="submit" value="Sign Up">
+    </form>
+
+    <div id="message-section"></div>
+  </div>
+
+  <script>
+    const form = document.querySelector('form');
+    const messageSection = document.getElementById('message-section');
+
+    form.addEventListener('submit', async function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+
+      // Perform client-side validation, if required
+
+      if (password !== confirmPassword) {
+        showMessage('Passwords do not match', 'error');
+        return;
+      }
+
+      const response = await fetch('http://localhost:3001/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email, password })
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+    showMessage(data.message, 'success');
+
+  } else {
+    showMessage(data.error, 'error');
+  }
+});
+    function showMessage(message, messageType) {
+      messageSection.innerHTML = `<div class="${messageType}">${message}</div>`;
+    }
+  </script>
+</body>
+</html>

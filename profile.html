@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Profile</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			color: #c7384f;
+			font-size: 36px;
+			margin-bottom: 10px;
+		}
+		h2 {
+			color: #6d6d6d;
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+		.profile-info {
+			background-color: #fff;
+			padding: 20px;
+			margin-top: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+		.profile-info label {
+			display: block;
+			font-size: 18px;
+			color: #6d6d6d;
+			margin-bottom: 5px;
+		}
+		.profile-info input[type="text"] {
+			padding: 10px;
+			font-size: 16px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		.profile-info input[type="submit"] {
+			background-color: #c7384f;
+			color: #fff;
+			font-size: 18px;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>My Profile</h1>
+		<div class="profile-info">
+			<h2>Personal Information</h2>
+			<form>
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name">
+				<label for="age">Age:</label>
+				<input type="text" id="age" name="age">
+				<label for="address">Address:</label>
+				<input type="text" id="address" name="address">
+				<label for="phone">Phone:</label>
+				<input type="text" id="phone" name="phone">
+				<label for="email">Email:</label>
+				<input type="text" id="email" name="email">
+				<input type="submit" value="Save Changes">
+			</form>
+		</div>
+		<div class="orders">
+			<h2>My Orders</h2>
+			<p>You haven't placed any orders yet.</p>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,266 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  background-color: #b8b5b5c9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 120px;
+  width: 120px;
+  margin-right: 50px;
+}
+
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.search-bar input[type="text"] {
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 15px;
+  background-color: #f2f2f2;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.search-bar button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #51c643e4;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.search-bar button:hover {
+  background-color: #333;
+}
+
+/*navbar*/
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+nav {
+	margin-left: 325px;
+}
+
+nav ul {
+	display: flex;
+	justify-content: center; /* Center align the items */
+	list-style-type: none;
+	margin-right: 10px;
+}
+
+
+
+
+
+nav ul li {
+	display: inline-block;
+	margin-right:-10px;
+}
+
+nav ul {
+	float: right;
+	margin-top: 35px;
+}
+
+
+button {
+	background-color: #fff;
+	color: #2a2a2a;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-size: 16px;
+	font-weight:bolder;
+	transition: all 0.3s ease;
+  
+}
+nav ul li a {
+  display: inline-block;
+  padding: 20px 20px;
+  
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+nav ul li a:hover {
+  background-color: #e84848;
+  color: #fff;
+  border-radius: 10px;
+}
+
+nav ul li:first-child a {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+nav ul li:last-child a {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+
+
+
+
+
+.heroine {
+  margin-top: 130px;
+}
+
+
+
+
+
+.heroine {
+ 
+  background-size: cover; /* scale the image to cover the entire container */
+  padding: 50px; /* add some padding around the text */
+  text-align: center; /* center the text horizontally */
+  color: rgb(225, 78, 78); /* set the text color to white */
+  font-family: 'Raleway', sans-serif; /* set the font */
+}
+
+.heroine h1 {
+  font-size: 48px; /* set the font size for the heading */
+  margin-bottom: 20px; /* add some space between the heading and paragraph */
+}
+
+.heroine p {
+  font-size: 24px; /* set the font size for the paragraph */
+  line-height: 1.5; /* set the line-height to make the text easier to read */
+  color: grey;
+}
+.heroine {
+  background-color: #000;
+  padding: 0px;
+  text-align: center;
+}
+
+.welcome {
+  margin: 0;
+  color: #fff;
+  font-size: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.welcome::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
+  opacity: 0;
+  pointer-events: none;
+  animation: sparkle 2s infinite alternate;
+}
+
+.box1 {
+  background-color: #706d6d;
+  color: #fdfbfb;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.box2 {
+  background-color: #706d6d;
+  border: 1px solid #f3eded;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: #fdfbfb;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.container {
+  max-width: 500px; /* Adjust the maximum width to your desired size */
+  padding: 50px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%); /* Invert the color to appear as black */
+}
+

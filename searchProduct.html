@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="home.css">
+	<title>Product Details</title>
+	<style>
+		body {
+        font-family: Arial, sans-serif;
+        margin: auto;
+        padding: 0;
+        background-color: #f2f2f2;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        margin-top:160px;
+        margin-bottom: 100px;
+      }
+
+      h1 {
+        font-size: 36px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      #product-image {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: inline-block;
+        width: 120px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      span {
+        color: #666;
+      }
+
+
+      h2 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      textarea:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+      }
+
+      #buttons[type="submit"] {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #686c70;
+        color: #fff;
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+
+      #buttons[type="submit"]:hover {
+        background-color: rgb(209, 58, 58);
+      }
+      #butt{
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #686c70;
+        color: #fff;
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+      #butt:hover{
+        background-color: rgb(209, 58, 58);
+      }
+      .search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar form {
+  display: flex;
+  align-items: center;
+}
+
+        
+	</style>
+</head>
+<body>
+    <header>
+		<div class="logo">
+			<a href ="index.html">
+				<img src="assets/images__1_-removebg-preview.png" alt="My Retail Store Logo">
+				</a>
+			<p style="font-family:'Allura'; font-size: 45px; white-space:nowrap;">Best Buy</p>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="cart.html">Cart</a></li>
+				<li><a href="profile.html">Profile</a></li>
+				<li><a href="aboutUs.html">About</a></li>
+				<li><a href="contactUs.html">Contact Us</a></li>
+			</ul>
+		</nav>
+    <div class="search-bar">
+			<form action="searchProduct.html" method="get">
+				<input type="text" placeholder="Search..." name="search" id="search">
+				<button type="submit">Go</button>
+			</form>
+			
+			<script src="search.js"></script>
+			  
+
+		</div>
+    </header>
+
+
+
+
+
+<div class="container">
+  <h1>Product Details</h1>
+      <img id="product-image" src="" alt="Product Image">
+
+  <div>
+    <label for="pid">Product ID:</label>
+    <span id="pid"></span>
+  </div>
+  <div>
+    <label for="prodname">Product Name:</label>
+    <span id="prodname"></span>
+  </div>
+  <div>
+    <label for="price">Price:</label>
+    <span id="price"></span>
+  </div>
+  <div>
+    <label for="discount">Discount:</label>
+    <span id="discount"></span>
+  </div>
+  <div>
+    <label for="mgf_date">Manufacturing Date:</label>
+    <span id="mgf_date"></span>
+  </div>
+  <button id="butt">Add to Cart</button>
+      <div>
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" value="1" min="1">
+        </div>
+
+      <h2>Review</h2>
+<form>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <label for="review">Review:</label>
+  <textarea id="review" name="review" required></textarea><br><br>
+
+  <button id="buttons" type="submit">Submit Review</button>
+</form>
+
+</div>
+
+<script>
+// Get the search query from the URL parameters
+const searchParams = new URLSearchParams(window.location.search);
+const query = searchParams.get('searchQuery');
+if (query === 'iphone14') {
+    document.getElementById('product-image').src = "/assets/iphone2.jpeg";
+  } else if (query === 'laptop') {
+    document.getElementById('product-image').src = "/assets/laptop.jpeg";
+  } else if (query === 'tuxedo') {
+    document.getElementById('product-image').src = "/assets/tuxedo.jpeg";
+  } else if (query === 'iron') {
+    document.getElementById('product-image').src = "/assets/iron2.jpeg";
+  } else if (query === 'buds') {
+    document.getElementById('product-image').src = "/assets/buds.jpeg";
+  } else if (query === 'gta5') {
+    document.getElementById('product-image').src = "/assets/gta5.jpeg";
+  } else if (query === 'tv') {
+    document.getElementById('product-image').src = "/assets/tv.jpeg";
+  } else if (query === 'ps5') {
+    document.getElementById('product-image').src = "/assets/ps5.jpeg";
+  }
+
+fetch(`http://localhost:3001/product-info?searchQuery=${query}`)
+  .then(response => response.json())
+  .then(data => {
+    // Format the date as a string
+    const mfg_date = new Date(data.mgf_date.replace(/(\d{2})\/(\d{2})\/(\d{4})/, "$2/$1/$3")).toLocaleDateString();
+
+// Update the HTML elements with the product details
+document.getElementById("pid").innerText = data.pid;
+document.getElementById("prodname").innerText = data.prodname;
+document.getElementById("price").innerText = data.price;
+document.getElementById("discount").innerText = data.discount;
+document.getElementById("mgf_date").innerText = mfg_date;
+})
+
+  .catch(error => {
+    console.error(error);
+    searchResults.textContent = 'An error occurred while searching.';
+  });
+</script>
